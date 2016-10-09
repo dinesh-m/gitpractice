@@ -1,0 +1,86 @@
+// Tell about last change in the commit history
+git diff HEAD~
+
+// Tell about last commit
+git show
+
+// Show log
+git log --graph --oneline
+git reflog
+
+// Show commit tree on console
+gitk
+
+// Show the code changes
+git blame <file_name>
+
+// See or verify remote repositories URLs
+git remote -v
+
+// Create a new branch from the current commit/branch
+git branch 'new_branch_name' or git checkout -b 'new_branch_name'
+
+// Switch out to a previous branch
+git checkout -
+
+// Create a new branch from the specified commit/branch
+git branch 'new_branch_name' 1dfghcc or git checkout -b 'new_branch_name' 1dfghcc
+
+// Show remote references list along with Commit IDs
+git ls-remote [remote]
+
+// Show details of remote references along with FETCH and PUSH URLs, remote branches and their tracking status
+git remote show origin
+
+// Show what each of your local branch is tracking and if your local branch is ahead, behind or both
+git branch -vv
+
+// Delete remote branch
+git push origin --delete 'remote_branch_name'
+
+// 'tracking branch' is a local branch, remote reference branch is 'upstream branch'. 'tracking branch' has a direct relationship to a remote branch 'upstream branch'
+
+// Set a remote upstream branch to a local branch, new or existing
+git push --set-upstream origin 'branch_name' or git push -u 'branch_name'
+
+Example- git push --set-upstream origin hotfix/1.8.4
+I want upstream branch name appear like hotfix/1.8.4 just like I created hotfix/1.8.4 locally from master.
+
+// --set-upstream can be replaced with -u : Example- git push -u origin hotfix/1.8.4
+
+
+// Push your local repository to Bitbucket or Github
+// First we need to add Bitbucket as a remote repository. Go to the folder of your local repository, the // one that contains the .git folder, and type:
+
+$ git remote add origin https://user@bitbucket.org/user/repository.git
+
+// where you should change the url with your repository url. This will create the alias origin to refer // to your Bitbucket repository (using origin as an alias for a remote repository is a common convention// ).
+
+// Run following command to verify if it's rightly tracked at origin
+
+$ git remote -v
+
+// Next, let’s push our existing repository into this new Bitbucket repository with:
+
+$ git push -u origin –-all
+
+// Delete a remote branch
+$ git push origin --delete <branch_name>
+
+// Stashing
+$ git stash
+
+// Restore stashed item - the top one from the stack
+$ git stash pop
+
+// List stash
+$ git stash list
+
+// Clear all stash
+$ git stash clear
+
+// Apply specific stash
+$ git stash apply stash@{1}
+
+// Drop specific stash
+$ git stash drop stash@{1}
