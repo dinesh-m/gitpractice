@@ -1,1 +1,2 @@
 # Git is an example of a DVCS (Distributed Version Control System).
+$ git log --graph --oneline
