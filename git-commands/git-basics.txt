@@ -1,1 +1,2 @@
 # Git is an example of a DVCS (Distributed Version Constron System).
+# It is important to understand that branches are just pointers to commits.
